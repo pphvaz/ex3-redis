@@ -2,7 +2,7 @@
 import json
 from datetime import datetime
 from ..models import produto
-from ..database.myredis import redis_manager
+from ..myredis import redis_manager
 
 class CartManager:
     def __init__(self):

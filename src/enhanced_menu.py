@@ -7,11 +7,10 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from .models import usuario, vendedor, produto, compra
-from config import client
-from config import db
-from src.auth.auth import auth_manager
-from src.cart.cart_manager import cart_manager
-from src.database.myredis import redis_manager
+from .config import client, db
+from .auth.auth import auth_manager
+from .cart.cart_manager import cart_manager
+from .myredis import redis_manager
 
 class EnhancedMenu:
     def __init__(self):

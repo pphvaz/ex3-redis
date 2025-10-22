@@ -6,7 +6,7 @@ Handles user login, logout, and session management using Redis
 import json
 from datetime import datetime
 from ..models import usuario
-from ..database.myredis import redis_manager
+from ..myredis import redis_manager
 
 class AuthManager:
     def __init__(self):

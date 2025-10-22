@@ -14,8 +14,8 @@ sys.path.insert(0, project_root)
 def create_admin_user():
     """Create admin user in the database"""
     try:
-        from config import client, db
-        from src.models.usuario import create_usuario_schema, insert_usuario
+        from .config import client, db
+        from .models.usuario import create_usuario_schema, insert_usuario
         
         print("🌱 Seeding admin user...")
         
@@ -64,7 +64,7 @@ def main():
     
     try:
         # Test database connection
-        from config import client
+        from .config import client
         client.admin.command('ping')
         print("✅ MongoDB connected successfully!")
         

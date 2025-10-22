@@ -19,16 +19,16 @@ def main():
         print("="*60)
         
         # Test database connections first
-        from config import client
+        from src.config import client
         client.admin.command('ping')
         print("✅ MongoDB conectado com sucesso!")
         
         # Seed admin user
         print("\n🌱 Seeding admin user...")
-        from seed_admin_user import create_admin_user
+        from src.seed_admin_user import create_admin_user
         create_admin_user()
         
-        from src.database.myredis import redis_manager
+        from src.myredis import redis_manager
         redis_success, redis_message = redis_manager.test_connection()
         if redis_success:
             print(f"✅ {redis_message}")
